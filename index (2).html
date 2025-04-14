@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Free Movies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      overflow-x: hidden;
+    }header {
+  background: linear-gradient(to right, #6a00ff, #000000);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 20px #6a00ff;
+}
+
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 2px solid #6a00ff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px #6a00ff;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h2 {
+  color: #ff66ff;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #cccccc;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #6a00ff;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #9900ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.complete-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #00ffcc, #6a00ff);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px #6a00ff;
+}
+
+.complete-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff66ff;
+}
+
+  </style>
+</head><body>
+  <header>
+    Complete Any One Offer to Unlock Free Movies
+  </header>
+  <div class="container">
+    <div class="card">
+      <h2>Google Pay Offer</h2>
+      <p>New user only. Download Google Pay, enter referral code <strong>6i0zb3i</strong>, and make your first payment of ₹10 or more to get ₹21 cashback.</p>
+      <a href="https://g.co/payinvite/6i0zb3i" target="_blank"><button onclick="showCompleteBtn()">Go to Google Pay</button></a>
+    </div><div class="card">
+  <h2>Paytm Offer</h2>
+  <p>New user only. Download Paytm and make a payment of at least ₹10 to complete this offer.</p>
+  <button onclick="showPaytmQR()">Get Paytm QR</button>
+  <img id="paytmQR" class="hidden" src="/mnt/data/file-VC3QrM1j6AJZoMMiCDaWPf" alt="Paytm QR" width="200">
+</div>
+
+<div class="card">
+  <h2>Probo Offer</h2>
+  <p>New user only. Download Probo, enter referral code <strong>ea2is5</strong>, and complete one trade.</p>
+  <a href="https://probo-in.onelink.me/1kre/aahv88tg" target="_blank"><button onclick="showCompleteBtn()">Go to Probo</button></a>
+</div>
+
+<div class="card">
+  <h2>MPL Offer</h2>
+  <p>New user only. Download MPL app, enter referral code <strong>N6JBX3YL</strong>, and complete the task to finish the offer.</p>
+  <a href="https://api.whatsapp.com/send?phone=917838533787&amp;text=I'd%20like%20to%20redeem%20my%20referral%20Codes%20ya22xxs8%26N6JBX3YL" target="_blank"><button onclick="showCompleteBtn()">Go to MPL</button></a>
+</div>
+
+<div id="completeSection" class="hidden">
+  <button class="complete-button" onclick="sendEmail()">I’ve Completed an Offer</button>
+</div>
+
+  </div>  <script>
+    let completedClicked = false;
+
+    function showPaytmQR() {
+      document.getElementById('paytmQR').classList.remove('hidden');
+      showCompleteBtn();
+    }
+
+    function showCompleteBtn() {
+      if (!completedClicked) {
+        document.getElementById('completeSection').classList.remove('hidden');
+        completedClicked = true;
+      }
+    }
+
+    function sendEmail() {
+      const email = 'eillegal92@gmail.com';
+      const subject = encodeURIComponent('Offer Completed');
+      const body = encodeURIComponent('Hi, I have completed one of the offers. Please share the movie links.');
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script></body></html>
